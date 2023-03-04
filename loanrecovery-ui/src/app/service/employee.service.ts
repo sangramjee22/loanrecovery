@@ -28,6 +28,7 @@ constructor(private http: HttpClient) { }
   }
 
   getEmployeesList(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+    const headers = {'Access-Control-Allow-Origin': '*'};
+    return this.http.get(`${this.baseUrl}`,{headers: headers});
   }
 }

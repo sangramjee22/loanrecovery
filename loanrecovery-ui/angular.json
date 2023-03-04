@@ -66,11 +66,14 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "loanrecovery-ui:build:production"
+              "browserTarget": "loanrecovery-ui:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
-              "browserTarget": "loanrecovery-ui:build:development"
+              "browserTarget": "loanrecovery-ui:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
+
           },
           "defaultConfiguration": "development"
         },
