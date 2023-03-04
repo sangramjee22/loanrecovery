@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.loanrecovery.app</groupId>
+    <artifactId>loanrecovery</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>loanrecovery-ui</artifactId>
+  <packaging>pom</packaging>
+  <name>Loan Recovery: UI</name>
+  <description>Loan Recovery: UI </description>
+
+  <properties>
+	  <eirslett.maven.frontend.version>1.10.3</eirslett.maven.frontend.version>
+	  <nodejs.version>v19.5.0</nodejs.version>
+	  <npm.version>8.19.3</npm.version>
+  </properties>
+
+  <build>
+	  <plugins>
+		  <plugin>
+			  <groupId>com.github.eirslett</groupId>
+			  <artifactId>frontend-maven-plugin</artifactId>
+			  <version>${eirslett.maven.frontend.version}</version>
+
+			  <configuration>
+				  <nodeVersion>${nodejs.version}</nodeVersion>
+				  <npmVersion>${npm.version}</npmVersion>
+				  <workingDirectory>${project.parent.basedir}/loanrecovery-ui</workingDirectory>
+				  <nodeDownloadRoot>https://nodejs.org/download/release/</nodeDownloadRoot>
+                  <npmDownloadRoot>https://registry.npmjs.org/npm/-/</npmDownloadRoot>
+			  </configuration>
+			  <executions>
+                <execution>
+                    <id>install node and npm</id>
+                    <goals>
+                        <goal>install-node-and-npm</goal>
+                    </goals>
+                    <phase>generate-resources</phase>
+                </execution>
+                <execution>
+					<id>npm install</id>
+					<goals>
+						<goal>npm</goal>
+					</goals>
+					<phase>generate-resources</phase>
+					<configuration>
+						<arguments>install</arguments>
+					</configuration>
+				</execution>
+
+				<!--<execution>
+					<id>lint</id>
+					<goals>
+						<goal>npm</goal>
+					</goals>
+					<phase>generate-resources</phase>
+					<configuration>
+						<arguments>run lint</arguments>
+					</configuration>
+				</execution>-->
+
+				<execution>
+					<id>build</id>
+					<goals>
+						<goal>npm</goal>
+					</goals>
+					<phase>generate-resources</phase>
+					<configuration>
+						<arguments>run build</arguments>
+					</configuration>
+				</execution>
+              </executions>
+		  </plugin>
+	  </plugins>
+  </build>
+</project>
