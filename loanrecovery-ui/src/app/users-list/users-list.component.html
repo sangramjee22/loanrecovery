@@ -18,13 +18,14 @@
       <tbody>
       <tr *ngFor="let employeeView of employees | async">
         <td>{{employeeView.name}}</td>
-        <td>{{employeeView.bucket}}</td>s
+        <td>{{employeeView.bucket}}</td>
         <td>{{employeeView.pos}}</td>
         <td>{{employeeView.spos}}</td>
         <td>{{employeeView.cbc}}</td>
         <td>{{employeeView.emi}}</td>
         <td>{{employeeView.rollBack}}</td>
-        <td><button (click)="deleteEmployee(employeeView.id)" class="btn btn-danger">Delete</button>
+        <td>
+          <button (click)="deleteEmployee(employeeView.id)" class="btn btn-danger">Delete</button>
           <button (click)="updateEmployee(employeeView.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
           <button (click)="employeeDetails(employeeView.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
         </td>
