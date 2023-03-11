@@ -41,6 +41,13 @@ public class UserDto {
 
     private Number rollBack;
 
+    private Number settlementAmount;
+
+    private Number collectionAmount;
+
+    private Number noOfEmi;
+
+    private Number normalization;
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

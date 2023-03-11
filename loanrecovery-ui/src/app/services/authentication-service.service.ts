@@ -13,7 +13,7 @@ export class AuthenticationServiceService {
   constructor(private httpClient: HttpClient) { }
 
   authenticate(userObj:LoginFormClass): Observable<any> {
-    return this.httpClient.post<any>('http://localhost:8080/loanrecovery/api/v1/authenticateUser',userObj);
+    return this.httpClient.post<any>('http://localhost:8090/api/v1/authenticateUser',userObj);
   }
 
   isUserLoggedIn() {

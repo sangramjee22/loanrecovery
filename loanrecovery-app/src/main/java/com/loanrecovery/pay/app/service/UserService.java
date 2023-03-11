@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class UserService {
@@ -49,5 +50,16 @@ public class UserService {
                     .build());
         }
         return users;
+    }
+
+    public UserDto updateEmployee(UserDto userDto){
+        Optional<User> user = userRepository.findById(userDto.getId());
+        User userUpdate = user.get();
+        if(user.isPresent()) {
+            userUpdate.setAddress(userDto.getAddress());
+            userUpdate.setPhoneNo(userDto.getPhoneNo());
+        }
+        userRepository.save(userUpdate);
+        return userDto;
     }
 }
