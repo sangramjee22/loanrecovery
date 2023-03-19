@@ -1,4 +1,4 @@
-<style>
+<!--<style>
   .header {
     background-color: #82FF96;
     padding: 15px;
@@ -14,7 +14,7 @@
 
 </style>
 
-<!-- Toolbar -->
+&lt;!&ndash; Toolbar &ndash;&gt;
 <header>
   <div class="px-3 py-2 text-bg-dark">
     <div class="container">
@@ -36,7 +36,7 @@
           <li>
             <a href="#" class="nav-link text-white">
               <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
-              Logout
+              Login
             </a>
           </li>
         </ul>
@@ -44,9 +44,11 @@
     </div>
   </div>
 
-</header>
+</header>-->
+
+<app-nav-bar></app-nav-bar>
 <div class="container" >
-   <app-users-list></app-users-list>
+  <router-outlet></router-outlet>
 </div>
 
 <footer class="footer">
