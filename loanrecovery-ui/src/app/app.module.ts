@@ -19,6 +19,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from "@angular/material/button";
+import { SidenavComponent } from './navigation/sidenav/sidenav.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { HeaderComponent } from './navigation/header/header.component';
 
 
 @NgModule({
@@ -29,7 +35,9 @@ import { MatButtonModule } from "@angular/material/button";
     NavBarComponent,
     HomeComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    SidenavComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +53,12 @@ import { MatButtonModule } from "@angular/material/button";
     MatCardModule,
     MatDialogModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule,
+    MatListModule,
+    MatTabsModule,
+    MatSidenavModule
+
   ],
   providers: [
 
