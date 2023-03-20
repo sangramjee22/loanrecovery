@@ -1,0 +1,17 @@
+<section fxLayout="column" fxFlexAlign="stretch">
+  <div fxFlexAlign="center">
+    <p>Welcome to ! Loan Recovery Management System</p>
+  </div>
+
+  <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
+    <mat-tab label="Banking Department">
+      <p>You can navigate all Banking Department Information.</p>
+    </mat-tab>
+    <mat-tab label="Non-Banking Department">
+      <p>You can navigate all Non-Banking Department Information.</p>
+    </mat-tab>
+    <mat-tab label="Management">
+      <p>Key Management.</p>
+    </mat-tab>
+  </mat-tab-group>
+</section>

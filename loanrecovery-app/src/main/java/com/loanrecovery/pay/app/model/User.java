@@ -50,7 +50,4 @@ public class User {
     @Column(name = "emp_idoroof_number")
     private String idProofNumber;
 
-
-
-
 }
