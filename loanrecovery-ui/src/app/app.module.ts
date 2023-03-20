@@ -25,6 +25,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HeaderComponent } from './navigation/header/header.component';
+import { AboutComponent } from './about/about.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { DeprartmentComponent } from './deprartment/deprartment.component';
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import { HeaderComponent } from './navigation/header/header.component';
     DashboardComponent,
     LoginComponent,
     SidenavComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent,
+    ContactusComponent,
+    DeprartmentComponent
   ],
   imports: [
     BrowserModule,
