@@ -68,7 +68,7 @@
     </pluginManagement>
   </build>
   <modules>
-	<!--<module>loanrecovery-ui</module>-->
+	<module>loanrecovery-ui</module>
   	<module>loanrecovery-app</module>
   </modules>
 </project>
